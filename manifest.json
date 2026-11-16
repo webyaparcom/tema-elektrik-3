@@ -1,0 +1,29 @@
+{
+  "name": "Amper Elektrik",
+  "short_name": "Amper Elektr",
+  "description": "Amper Elektrik: tesisat, pano, topraklama, şarj ünitesi ve çatı GES bağlantısı; her işte ölçüm tutanağı. Demo site; içerik kurgusaldır.",
+  "start_url": "/tr/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#A3E635",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/img/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

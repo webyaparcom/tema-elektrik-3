@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": "6gxp5barcm",
+      "name": {
+        "tr": "Hizmetler",
+        "en": "Services",
+        "ar": "الخدمات"
+      },
+      "description": {
+        "tr": "Tesisat, pano, topraklama, şarj ve GES; her işin teslimdeki kanıtı.",
+        "en": "Wiring, panels, earthing, EV charging and solar; the proof each job comes with.",
+        "ar": "تمديدات ولوحات وتأريض وشحن وطاقة شمسية؛ ودليل كل عمل عند التسليم."
+      },
+      "path": "hizmetler",
+      "icon": "work",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "ci8xgh",
+          "nh1gf4"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Rakamlar",
+        "en": "Figures",
+        "ar": "الأرقام"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "info",
+      "desing": {
+        "header": [],
+        "body": [
+          "k6o9f1",
+          "kg6sad"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "İlçe ilçe iş kayıtları ve referans dağılımı (kurgusal).",
+        "en": "Job records by district and reference breakdown (fictional).",
+        "ar": "سجلات الأعمال حسب الحي وتوزيع المرجعيات (افتراضية)."
+      }
+    },
+    {
+      "id": "3v37tkgy6l",
+      "name": {
+        "tr": "Referanslar",
+        "en": "References",
+        "ar": "المرجعيات"
+      },
+      "description": {
+        "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
+        "en": "Our partners and customer reviews (fictional).",
+        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+      },
+      "path": "referanslar",
+      "icon": "stars",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "afwdry",
+          "kg6sad",
+          "nh1gf4"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 3,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "rfuqha",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Keşif, ölçüm ve arıza hattı; adres ve çalışma saatleri.",
+        "en": "Survey, measurement and fault line; address and opening hours.",
+        "ar": "المعاينة والقياس وخط الأعطال؛ العنوان وساعات العمل."
+      }
+    }
+  ],
+  "desc": []
+}

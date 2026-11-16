@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Amper Elektrik: tesisat, pano, topraklama, şarj ünitesi ve çatı GES bağlantısı; her işte ölçüm tutanağı. Demo site; içerik kurgusaldır.",
+    "en": "Amper Electric: wiring, panels, earthing, EV chargers and rooftop solar connection; a measurement record with every job. Demo site; content is fictional.",
+    "ar": "أمبير للكهرباء: تمديدات ولوحات وتأريض وشواحن سيارات وربط الطاقة الشمسية على الأسطح؛ محضر قياس مع كل عمل. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "elektrikçi, elektrik tesisatı, pano, topraklama ölçümü, şarj ünitesi montajı, Gaziantep",
+    "en": "electrician, electrical wiring, panel, earthing test, EV charger installation, Gaziantep",
+    "ar": "كهربائي، تمديدات كهربائية، لوحة توزيع، قياس التأريض، تركيب شاحن سيارات، غازي عنتاب"
+  },
+  "category": "Kurumsal",
+  "name": "Amper Elektrik",
+  "domain": "elektrik-3.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "nunito-sans",
+    "heading": "barlow-condensed",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#A3E635",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "10px",
+    "--mx-radius-md": "16px",
+    "--mx-radius-lg": "22px",
+    "--mx-radius-xl": "30px"
+  },
+  "icon": "icon.png"
+}

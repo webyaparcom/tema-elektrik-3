@@ -1,0 +1,47 @@
+{
+  "name": {
+    "tr": "Rakamlar",
+    "en": "Figures",
+    "ar": "الأرقام"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "info",
+  "desing": {
+    "header": [],
+    "body": [
+      "k6o9f1",
+      "kg6sad"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "İlçe ilçe iş kayıtları ve referans dağılımı (kurgusal).",
+    "en": "Job records by district and reference breakdown (fictional).",
+    "ar": "سجلات الأعمال حسب الحي وتوزيع المرجعيات (افتراضية)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Rakamlar",
+    "en": "Figures",
+    "ar": "الأرقام"
+  },
+  "keyword": {
+    "tr": "hakkımızda",
+    "en": "about",
+    "ar": "من نحن"
+  },
+  "text": {},
+  "update": "2026-11-16T16:05:22.388Z",
+  "date": "2026-10-30"
+}
