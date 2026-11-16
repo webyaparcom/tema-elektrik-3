@@ -1,0 +1,57 @@
+{
+  "name": "İletişim Hızlı Çevir — açılır eylem düğmesi (speed dial) + yer/saat kartları",
+  "description": "Sağda «Bize ulaşın» yazılı büyük eylem düğmesi (details/summary, JS'siz); açıkken altında yığılmış hızlı arama dalları: her dalda solda etiket + değer balonu, sağda yuvarlak kanal düğmesi (telefon · WhatsApp · e-posta · bağlantılı data satırı), sırayla zıplayarak belirir; artı işareti 45° döner. Solda başlık, metin ve yer/saat kartları (adres + yol tarifi · saat). iletisim-buyuk-dugmeler eylemleri sabit dev düğme ızgarası yapar; bu modül mobil uygulamalardaki SPEED-DIAL kalıbı: yerel details/summary ile aç-kapa, artı → çarpı dönüşü, dalların kademeli giriş animasyonu ve eylem / bilgi kanallarının iki sütuna ayrılması. Kanallar desing'den (adres · telefon · WhatsApp · e-posta · saat) + data satırları; etiketler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Kanal yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "add_circle",
+  "category": "contact",
+  "subCategory": "speed-dial",
+  "tags": [
+    "contact",
+    "speed-dial",
+    "details",
+    "mobile-first",
+    "actions",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "adres": "",
+    "telefon": "",
+    "eposta": "",
+    "whatsapp": "",
+    "saat": "",
+    "haritaUrl": "",
+    "haritaGomme": "",
+    "waMesaj": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing",
+    "alanlar": {
+      "ikon": "Material Symbols adı (kanal türü ikondan da anlaşılır: mail · call · location_on · schedule)",
+      "deger": "dil sözlüğü (görünen değer, zorunlu; eski `text`)",
+      "url": "bağlantı (boşsa e-posta/telefon/haritadan türetilir)",
+      "baslik": "dil sözlüğü (kanal etiketi)"
+    }
+  }
+}

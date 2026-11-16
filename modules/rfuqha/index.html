@@ -1,0 +1,103 @@
+<section class="modulex-iletisim-hizli-cevir{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-iletisim-hizli-cevir-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* iletisim-hizli-cevir — iletisim-buyuk-dugmeler eylemleri sabit dev düğme ızgarası yapar; bu modül mobil uygulamalardaki SPEED-DIAL kalıbı: yerel details/summary ile aç-kapa, artı → çarpı dönüşü, dalların kademeli giriş animasyonu ve eylem / bilgi kanallarının iki sütuna ayrılması. */
+  .modulex-iletisim-hizli-cevir { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-iletisim-hizli-cevir *, .modulex-iletisim-hizli-cevir *::before, .modulex-iletisim-hizli-cevir *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-iletisim-hizli-cevir :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-iletisim-hizli-cevir :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-iletisim-hizli-cevir :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-iletisim-hizli-cevir :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-iletisim-hizli-cevir img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-iletisim-hizli-cevir) img { height: auto; }
+  .modulex-iletisim-hizli-cevir [hidden] { display: none !important; }
+  .modulex-iletisim-hizli-cevir :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-iletisim-hizli-cevir :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-iletisim-hizli-cevir-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-iletisim-hizli-cevir-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-iletisim-hizli-cevir--bassiz .modulex-iletisim-hizli-cevir-bas { display: none; }
+  .modulex-iletisim-hizli-cevir-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-iletisim-hizli-cevir-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-iletisim-hizli-cevir-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-iletisim-hizli-cevir-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-iletisim-hizli-cevir-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-iletisim-hizli-cevir-dugme:hover { transform: translateY(-2px); }
+  .modulex-iletisim-hizli-cevir-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-iletisim-hizli-cevir-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-iletisim-hizli-cevir-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-iletisim-hizli-cevir-duzen { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+  .modulex-iletisim-hizli-cevir-duzen--tek { grid-template-columns: minmax(0, 1fr); }
+  .modulex-iletisim-hizli-cevir-bilgi { display: grid; gap: 16px; min-width: 0; }
+  .modulex-iletisim-hizli-cevir-kartlar { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px; margin-block-start: 8px; }
+  .modulex-iletisim-hizli-cevir-bk { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 8px 14px; padding: 16px; border: 1px solid --cizgi--; border-radius: --yuvarlak--; background: --kartBg--; transition: border-color 0.25s ease; }
+  .modulex-iletisim-hizli-cevir-bk:hover { border-color: color-mix(in srgb, --accent-- 50%, transparent); }
+  .modulex-iletisim-hizli-cevir-bk .modulex-iletisim-hizli-cevir-eylem { grid-column: 2; font-size: 0.92rem; }
+  .modulex-iletisim-hizli-cevir-bgovde { display: grid; gap: 2px; min-width: 0; }
+  .modulex-iletisim-hizli-cevir-padk { justify-self: end; inline-size: min(100%, 400px); }
+  .modulex-iletisim-hizli-cevir-fab { display: flex; align-items: center; justify-content: flex-end; gap: 14px; inline-size: fit-content; min-height: 64px; margin-inline-start: auto; padding-block: 8px; padding-inline: 24px 8px; border-radius: 999px; background: --accent--; color: --accentText--; font-size: 1.05rem; font-weight: 800; list-style: none; box-shadow: 0 18px 36px -18px color-mix(in srgb, --accent-- 80%, transparent); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .modulex-iletisim-hizli-cevir-fab::-webkit-details-marker { display: none; }
+  .modulex-iletisim-hizli-cevir-fab:hover { transform: translateY(-2px); box-shadow: 0 22px 40px -18px color-mix(in srgb, --accent-- 90%, transparent); }
+  .modulex-iletisim-hizli-cevir-arti { display: inline-grid; place-items: center; inline-size: 48px; block-size: 48px; border-radius: 50%; background: color-mix(in srgb, --accentText-- 18%, transparent); font-size: 28px; transition: transform 0.35s ease; }
+  .modulex-iletisim-hizli-cevir-pad[open] .modulex-iletisim-hizli-cevir-arti { transform: rotate(45deg); }
+  .modulex-iletisim-hizli-cevir-yigin { display: grid; gap: 12px; margin-block-start: 16px; }
+  .modulex-iletisim-hizli-cevir-dal { animation: modulex-iletisim-hizli-cevir-cik 0.4s cubic-bezier(0.2, 0.8, 0.3, 1.3) both; animation-delay: calc(var(--i, 0) * 70ms); }
+  @keyframes modulex-iletisim-hizli-cevir-cik { from { opacity: 0; transform: translateY(-14px) scale(0.9); } to { opacity: 1; transform: none; } }
+  .modulex-iletisim-hizli-cevir-dlink { display: flex; align-items: center; justify-content: flex-end; gap: 14px; color: inherit; text-decoration: none; }
+  .modulex-iletisim-hizli-cevir-detiket { display: grid; justify-items: end; gap: 2px; min-width: 0; padding: 8px 14px; border-radius: 12px; background: --kartBg--; text-align: end; box-shadow: 0 8px 22px -14px color-mix(in srgb, --text-- 50%, transparent); transition: background 0.2s ease; }
+  .modulex-iletisim-hizli-cevir-dlink:hover .modulex-iletisim-hizli-cevir-detiket { background: color-mix(in srgb, --accent-- 10%, --kartBg--); }
+  .modulex-iletisim-hizli-cevir-dad { color: --muted--; font-size: 0.78rem; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; }
+  .modulex-iletisim-hizli-cevir-ddeger { font-weight: 700; overflow-wrap: anywhere; }
+  .modulex-iletisim-hizli-cevir-dtop { flex: none; display: inline-grid; place-items: center; inline-size: 52px; block-size: 52px; margin-inline-end: 6px; border-radius: 50%; background: --bg--; color: --accentInk--; box-shadow: 0 0 0 1px --cizgi--, 0 10px 22px -12px color-mix(in srgb, --text-- 45%, transparent); transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-iletisim-hizli-cevir-dlink:hover .modulex-iletisim-hizli-cevir-dtop { transform: scale(1.08); background: --accent--; color: --accentText--; }
+  @media (max-width: 1024px) {
+    .modulex-iletisim-hizli-cevir-duzen { grid-template-columns: minmax(0, 1fr); }
+    .modulex-iletisim-hizli-cevir-padk { justify-self: stretch; inline-size: 100%; }
+  }
+  @media (max-width: 768px) {
+    .modulex-iletisim-hizli-cevir-fab { inline-size: 100%; justify-content: space-between; }
+  }
+  .modulex-iletisim-hizli-cevir-kikon { flex: none; display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: color-mix(in srgb, --accent-- 14%, transparent); color: --accentInk--; font-size: 24px; }
+  .modulex-iletisim-hizli-cevir-ketiket { display: block; color: --muted--; font-size: 0.82rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; }
+  .modulex-iletisim-hizli-cevir-deger { color: inherit; font-weight: 650; text-decoration: none; overflow-wrap: anywhere; transition: color 0.2s ease; }
+  a.modulex-iletisim-hizli-cevir-deger:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-iletisim-hizli-cevir-eylem { display: inline-flex; align-items: center; gap: 6px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.2s ease; }
+  .modulex-iletisim-hizli-cevir-eylem:hover { gap: 10px; }
+  .modulex-iletisim-hizli-cevir-eylem .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-hizli-cevir-kopya { display: none; align-items: center; gap: 6px; min-height: 36px; padding: 6px 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: --text--; font: inherit; font-size: 0.85rem; font-weight: 650; transition: border-color 0.2s ease, background 0.2s ease; }
+  .modulex-iletisim-hizli-cevir--kjs .modulex-iletisim-hizli-cevir-kopya { display: inline-flex; }
+  .modulex-iletisim-hizli-cevir-kopya:hover { border-color: --accent--; }
+  .modulex-iletisim-hizli-cevir-kopya .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-hizli-cevir--kopyalandi { background: color-mix(in srgb, --accent-- 14%, transparent); }
+  .modulex-iletisim-hizli-cevir-sosyal { display: grid; gap: 10px; }
+  .modulex-iletisim-hizli-cevir-sbaslik { color: --muted--; font-size: 0.9rem; font-weight: 650; }
+  .modulex-iletisim-hizli-cevir-sliste { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-iletisim-hizli-cevir-cip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 14px; border: 1px solid --cizgi--; border-radius: 999px; color: inherit; font-weight: 650; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-iletisim-hizli-cevir-cip:hover { border-color: --accent--; transform: translateY(-2px); }
+  .modulex-iletisim-hizli-cevir-cikon { font-size: 18px; }
+  .modulex-iletisim-hizli-cevir-harita { position: relative; overflow: hidden; min-height: 280px; border-radius: --yuvarlak--; background: --kartBg--; }
+  .modulex-iletisim-hizli-cevir-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .modulex-iletisim-hizli-cevir-hdesen { position: absolute; inset: 0; display: grid; place-items: center; background-color: color-mix(in srgb, --accent-- 8%, --kartBg--); background-image: linear-gradient(color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), radial-gradient(circle at 30% 40%, color-mix(in srgb, --accent-- 18%, transparent) 0 18%, transparent 19%); background-size: 36px 36px, 36px 36px, 100% 100%; }
+  .modulex-iletisim-hizli-cevir-pin { color: --accentInk--; font-size: 56px; animation: modulex-iletisim-hizli-cevir-zipla 2.4s ease-in-out infinite; }
+  @keyframes modulex-iletisim-hizli-cevir-zipla { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .modulex-iletisim-hizli-cevir-hyol { position: absolute; inset-block-end: 16px; inset-inline-start: 16px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 16px; border-radius: 999px; background: --bg--; color: --text--; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px color-mix(in srgb, --text-- 16%, transparent); transition: transform 0.2s ease; }
+  .modulex-iletisim-hizli-cevir-hyol:hover { transform: translateY(-2px); }
+  .modulex-iletisim-hizli-cevir-hyol .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-hizli-cevir :is(.modulex-iletisim-hizli-cevir-baslik, .modulex-iletisim-hizli-cevir-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-hizli-cevir-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-iletisim-hizli-cevir { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-iletisim-hizli-cevir *, .modulex-iletisim-hizli-cevir *::before, .modulex-iletisim-hizli-cevir *::after { animation: none !important; transition: none !important; }
+  }
+</style>

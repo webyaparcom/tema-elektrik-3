@@ -1,0 +1,40 @@
+{
+  "id": "6gxp5barcm",
+  "name": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "description": {
+    "tr": "Tesisat, pano, topraklama, şarj ve GES; her işin teslimdeki kanıtı.",
+    "en": "Wiring, panels, earthing, EV charging and solar; the proof each job comes with.",
+    "ar": "تمديدات ولوحات وتأريض وشحن وطاقة شمسية؛ ودليل كل عمل عند التسليم."
+  },
+  "keyword": {
+    "tr": "Hizmet ve kanıt",
+    "en": "Service and proof",
+    "ar": "الخدمة والدليل"
+  },
+  "path": "hizmetler",
+  "icon": "work",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "ci8xgh",
+      "nh1gf4"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "date": "2026-11-16T15:59:20.717Z",
+  "update": "2026-11-16T16:05:22.384Z"
+}
