@@ -3,17 +3,23 @@
   "name": {
     "tr": "Referanslar",
     "en": "References",
-    "ar": "المرجعيات"
+    "ar": "المرجعيات",
+    "de": "Referenzen",
+    "ru": "Референсы"
   },
   "description": {
     "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
     "en": "Our partners and customer reviews (fictional).",
-    "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+    "ar": "شركاؤنا وتقييمات عملائنا (افتراضية).",
+    "de": "Unsere Geschäftspartner und Kundenstimmen (fiktiv).",
+    "ru": "Наши деловые партнёры и отзывы клиентов (вымышленные)."
   },
   "keyword": {
     "tr": "referans, müşteri yorumu",
     "en": "reference, review",
-    "ar": "مرجع، تقييم"
+    "ar": "مرجع، تقييم",
+    "de": "Referenz, Kundenbewertung",
+    "ru": "рекомендация, отзыв клиента"
   },
   "path": "referanslar",
   "icon": "stars",
@@ -34,7 +40,9 @@
   "title": {
     "tr": "Referanslar",
     "en": "References",
-    "ar": "المرجعيات"
+    "ar": "المرجعيات",
+    "de": "Referenzen",
+    "ru": "Референсы"
   },
   "date": "2026-11-16T15:59:20.726Z",
   "update": "2026-11-16T16:05:22.391Z"
