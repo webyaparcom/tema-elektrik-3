@@ -5,12 +5,16 @@
       "name": {
         "tr": "Hizmetler",
         "en": "Services",
-        "ar": "الخدمات"
+        "ar": "الخدمات",
+        "de": "Leistungen",
+        "ru": "Услуги"
       },
       "description": {
         "tr": "Tesisat, pano, topraklama, şarj ve GES; her işin teslimdeki kanıtı.",
         "en": "Wiring, panels, earthing, EV charging and solar; the proof each job comes with.",
-        "ar": "تمديدات ولوحات وتأريض وشحن وطاقة شمسية؛ ودليل كل عمل عند التسليم."
+        "ar": "تمديدات ولوحات وتأريض وشحن وطاقة شمسية؛ ودليل كل عمل عند التسليم.",
+        "de": "Installation, panels, earthing, charging and solar; the proof of every job at handover.",
+        "ru": "Монтаж, щиты, заземление, зарядка и солнечная энергия; доказательство каждого заказа при сдаче."
       },
       "path": "hizmetler",
       "icon": "work",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Rakamlar",
         "en": "Figures",
-        "ar": "الأرقام"
+        "ar": "الأرقام",
+        "de": "Zahlen",
+        "ru": "Цифры"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -51,7 +57,9 @@
       "description": {
         "tr": "İlçe ilçe iş kayıtları ve referans dağılımı (kurgusal).",
         "en": "Job records by district and reference breakdown (fictional).",
-        "ar": "سجلات الأعمال حسب الحي وتوزيع المرجعيات (افتراضية)."
+        "ar": "سجلات الأعمال حسب الحي وتوزيع المرجعيات (افتراضية).",
+        "de": "Aufträge und Referenzverteilung nach Bezirken (fiktiv).",
+        "ru": "Заказы и распределение референсов по районам (условные)."
       }
     },
     {
@@ -59,12 +67,16 @@
       "name": {
         "tr": "Referanslar",
         "en": "References",
-        "ar": "المرجعيات"
+        "ar": "المرجعيات",
+        "de": "Referenzen",
+        "ru": "Референсы"
       },
       "description": {
         "tr": "İş ortaklarımız ve müşteri yorumlarımız (kurgusal).",
         "en": "Our partners and customer reviews (fictional).",
-        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية)."
+        "ar": "شركاؤنا وتقييمات عملائنا (افتراضية).",
+        "de": "Unsere Geschäftspartner und Kundenstimmen (fiktiv).",
+        "ru": "Наши деловые партнёры и отзывы клиентов (вымышленные)."
       },
       "path": "referanslar",
       "icon": "stars",
@@ -85,7 +97,9 @@
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "اتصل بنا"
+        "ar": "اتصل بنا",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -106,7 +120,9 @@
       "description": {
         "tr": "Keşif, ölçüm ve arıza hattı; adres ve çalışma saatleri.",
         "en": "Survey, measurement and fault line; address and opening hours.",
-        "ar": "المعاينة والقياس وخط الأعطال؛ العنوان وساعات العمل."
+        "ar": "المعاينة والقياس وخط الأعطال؛ العنوان وساعات العمل.",
+        "de": "Besichtigungs-, Mess- und Störungshotline; Adresse und Öffnungszeiten.",
+        "ru": "Линия для осмотра, замеров и аварийных заявок; адрес и часы работы."
       }
     }
   ],

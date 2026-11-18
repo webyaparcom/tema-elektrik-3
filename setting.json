@@ -4,12 +4,16 @@
   "description": {
     "tr": "Amper Elektrik: tesisat, pano, topraklama, şarj ünitesi ve çatı GES bağlantısı; her işte ölçüm tutanağı. Demo site; içerik kurgusaldır.",
     "en": "Amper Electric: wiring, panels, earthing, EV chargers and rooftop solar connection; a measurement record with every job. Demo site; content is fictional.",
-    "ar": "أمبير للكهرباء: تمديدات ولوحات وتأريض وشواحن سيارات وربط الطاقة الشمسية على الأسطح؛ محضر قياس مع كل عمل. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "أمبير للكهرباء: تمديدات ولوحات وتأريض وشواحن سيارات وربط الطاقة الشمسية على الأسطح؛ محضر قياس مع كل عمل. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Amper Elektrik: Installation, Schaltschränke, Erdung, Ladeeinheiten und Dach-PV-Anschluss; bei jeder Arbeit ein Messprotokoll. Demo-Seite; Inhalte sind fiktiv.",
+    "ru": "Amper Elektrik: электромонтаж, щиты, заземление, зарядные станции и подключение солнечной электростанции на крыше; протокол измерений при каждой работе. Демо-сайт; контент вымышлен."
   },
   "keyword": {
     "tr": "elektrikçi, elektrik tesisatı, pano, topraklama ölçümü, şarj ünitesi montajı, Gaziantep",
     "en": "electrician, electrical wiring, panel, earthing test, EV charger installation, Gaziantep",
-    "ar": "كهربائي، تمديدات كهربائية، لوحة توزيع، قياس التأريض، تركيب شاحن سيارات، غازي عنتاب"
+    "ar": "كهربائي، تمديدات كهربائية، لوحة توزيع، قياس التأريض، تركيب شاحن سيارات، غازي عنتاب",
+    "de": "Elektriker, Elektroinstallation, Schaltschrank, Erdungsmessung, Ladestationsmontage, Gaziantep",
+    "ru": "электрик, электромонтаж, щиток, измерение заземления, монтаж зарядной станции, Газиантеп"
   },
   "category": "Kurumsal",
   "name": "Amper Elektrik",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

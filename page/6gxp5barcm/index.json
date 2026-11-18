@@ -3,17 +3,23 @@
   "name": {
     "tr": "Hizmetler",
     "en": "Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "Leistungen",
+    "ru": "Услуги"
   },
   "description": {
     "tr": "Tesisat, pano, topraklama, şarj ve GES; her işin teslimdeki kanıtı.",
     "en": "Wiring, panels, earthing, EV charging and solar; the proof each job comes with.",
-    "ar": "تمديدات ولوحات وتأريض وشحن وطاقة شمسية؛ ودليل كل عمل عند التسليم."
+    "ar": "تمديدات ولوحات وتأريض وشحن وطاقة شمسية؛ ودليل كل عمل عند التسليم.",
+    "de": "Installation, panels, earthing, charging and solar; the proof of every job at handover.",
+    "ru": "Монтаж, щиты, заземление, зарядка и солнечная энергия; доказательство каждого заказа при сдаче."
   },
   "keyword": {
     "tr": "Hizmet ve kanıt",
     "en": "Service and proof",
-    "ar": "الخدمة والدليل"
+    "ar": "الخدمة والدليل",
+    "de": "Service und Nachweis",
+    "ru": "Обслуживание и подтверждение"
   },
   "path": "hizmetler",
   "icon": "work",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Hizmetler",
     "en": "Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "Leistungen",
+    "ru": "Услуги"
   },
   "date": "2026-11-16T15:59:20.717Z",
   "update": "2026-11-16T16:05:22.384Z"
